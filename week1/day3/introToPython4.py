@@ -1,6 +1,7 @@
 firstresponse = int(input("what is your number?"))
-if (firstresponse % 2) == 0:
-    print("{0} is Even number")
-else:
-    print("{0} is Odd number") 
-    
+if (firstresponse % 3) == 0:
+    print("Fizz")
+if (firstresponse % 5) == 0:
+    print("Buzz")
+if (firstresponse % 3 and 5) == 0:
+    print("Fizz Buzz")
