@@ -21,11 +21,12 @@ class character:
         self.Name = Name
         self.HP= HP
         self.ATK = ATK
-        # created function inside of class to apply to all characters
+        # created function inside of class to apply to all characters using the self. method
     def takedamage(self,damage_amount):
         self.HP -= damage_amount
 
-
+# created variable to take input from user to take place as the name for the Hero.
+# I also assigned the hero and villian HP and Atk power.
 name = input("Enter your character's name:")
 Hero = character(name,120,25)
 Villian = character("Zaboomafoo",135,30)
@@ -41,7 +42,6 @@ What do you want to do?
 3. Flee
 """))
         # I recalled certain parameters from the class to create a function for the characters to take damage.
-        # It also displays the remaining balance of the HP for both characters.
     if choice == 1:
         print(f"the villian's remaining HP is {Villian.HP}")
         print(f"the hero's remaining HP is {Hero.HP}")
