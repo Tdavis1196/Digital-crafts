@@ -21,7 +21,7 @@ class character:
         self.Name = Name
         self.HP= HP
         self.ATK = ATK
-        # created function inside of class to apply to all characters using the self. method
+        # created function inside of class to apply to all characters
     def takedamage(self,damage_amount):
         self.HP -= damage_amount
 
@@ -33,30 +33,37 @@ Villian = character("Zaboomafoo",135,30)
 
 
 # I used while true here so that my game will continuosly run these actions after the user's input.
+# I choice = int(input()) to set how many options will be given to the user.
 while True:
     choice = int(input("""The evildoer, Zaboomafoo, has terminated the last of the heroes! 
 You are the sole survivor and must defeat this villian to save the planet.
 What do you want to do?
 1. Strike
-2. Defend
+2. Defend/Counter
 3. Flee
 """))
-        # I recalled certain parameters from the class to create a function for the characters to take damage.
+        #
+        #I recalled certain parameters from the class to create a function for the characters to take damage
     if choice == 1:
         print(f"the villian's remaining HP is {Villian.HP}")
         print(f"the hero's remaining HP is {Hero.HP}")
         Villian.takedamage(Hero.ATK)
-        Hero.takedamage(Villian.ATK*.70)
+        Hero.takedamage(Villian.ATK*.65)
         if Hero.HP <= 0:
             print("game over")
+        elif Villian.HP <= 0:
+            print("Victory")
             break
 
     elif choice == 2:
         print(f"the villian's remaining HP is {Villian.HP}")
         print(f"the hero's remaining HP is {Hero.HP}")
         Hero.takedamage(Villian.ATK/2)
+        Villian.takedamage(Hero.ATK*.80)
         if Hero.HP <= 0:
             print("game over")
+        elif Villian.HP <= 0:
+            print("Victory")
             break
 
     elif choice == 3:
