@@ -1,21 +1,3 @@
-# You must create a class for your characters
-#  You will have a good character and a bad character
-#  Please write out any actions as functions/methods
-#  The game will loop until a victor is chosen, that victor is chosen when either one of you loses all your health
-#  You must be able to attack the opposing character (Knight attacks Goblin for 10 damage)
-#  Write a medium article explaining your logic and code
-#  Right a readme doc for your github repo and please link your repo in your medium article as well
-#  Submit this as a issue following our current issue format.
-
-# As a user, I should be able to choose a Hero and give it a name
-# As a user, I should be able to choose a Hero and see my stats (health,attack, etc)
-# As a user, I should be able to immediately fight a villain
-# As a user, I should be able to choose an action from a menu that isprinted
-# As a user, I should be able to view this menu by calling a function
-# As a user, I should be able to have the game quit if I reach 0 health or the enemy reaches 0 health
-
-
-
 class character:
     def __init__(self,Name,HP,ATK):
         self.Name = Name
@@ -30,27 +12,32 @@ class character:
 name = input("Enter your character's name:")
 Hero = character(name,120,25)
 Villian = character("Zaboomafoo",135,30)
-
+print({"Hero Name"},Hero.Name,{"Hero HP"},Hero.HP,{"Hero Attack Power"},Hero.ATK)
+print({"Villian Name"},Villian.Name,{"Villian HP"},Villian.HP,{"Villian Attack Power"},Villian.ATK)
 
 # I used while true here so that my game will continuosly run these actions after the user's input.
-# I choice = int(input()) to set how many options will be given to the user.
-while True:
-    choice = int(input("""The evildoer, Zaboomafoo, has terminated the last of the heroes! 
+# I choice = int(input())to set how many options will be given to the user.
+print("""The evildoer, Zaboomafoo, has terminated the last of the heroes! 
 You are the sole survivor and must defeat this villian to save the planet.
-What do you want to do?
+""")
+while True:
+    choice = int(input("""What do you want to do?
 1. Strike
 2. Defend/Counter
 3. Flee
+4. Quit
 """))
-        #
+        
         #I recalled certain parameters from the class to create a function for the characters to take damage
     if choice == 1:
         print(f"You have struck Zaboomafoo, great job! But it looks like you took damage as well")
         print(f"the villian's remaining HP is {Villian.HP}")
         print(f"the hero's remaining HP is {Hero.HP}")
         Villian.takedamage(Hero.ATK)
-        Hero.takedamage(Villian.ATK*.65)
+        Hero.takedamage(Villian.ATK*.65) 
+        # the villian and hero takes damage in this instance
         if Hero.HP <= 0:
+            # if/elif statement to break the loop
             print("game over")
         elif Villian.HP <= 0:
             print("Victory")
@@ -75,6 +62,8 @@ What do you want to do?
         if Hero.HP <= 0:
             print(name,", you have been DEFEATED!")
             break
+    elif choice == 4:
+        break
 
         
 
