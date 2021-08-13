@@ -3,22 +3,22 @@ class character:
         self.Name = Name
         self.HP= HP
         self.ATK = ATK
-        # created function inside of class to apply to all characters
     def takedamage(self,damage_amount):
         self.HP -= damage_amount
-
-# created variable to take input from user to take place as the name for the Hero.
-# I also assigned the hero and villian HP and Atk power.
+# I created my class and named it character and gave it parameters.
+# I had to define a function within the class so that it applies to all characters
 name = input("Enter your character's name:")
 Hero = character(name,120,40)
-Villian = character("Zaboomafoo",135,45)
+Villain = character("Zaboomafoo",135,45)
+# I created a variable to take input from user and replace it as the name for the Hero.
+# I also assigned the hero and Villain HP and Atk power.
 print({"Hero Name"},Hero.Name,{"Hero HP"},Hero.HP,{"Hero Attack Power"},Hero.ATK)
-print({"Villian Name"},Villian.Name,{"Villian HP"},Villian.HP,{"Villian Attack Power"},Villian.ATK)
+print({"Villain Name"},Villain.Name,{"Villain HP"},Villain.HP,{"Villain Attack Power"},Villain.ATK)
 
-# I used while true here so that my game will continuosly run these actions after the user's input.
-# I choice = int(input())to set how many options will be given to the user.
+# I used while true here so that my game will continuosly run these actions after the user's input until it breaks.
+# I used choice = int(input())to have a number given back for my options below
 print("""The evildoer, Zaboomafoo, has terminated the last of the heroes! 
-You are the sole survivor and must defeat this villian to save the planet.
+You are the sole survivor and must defeat this Villain to save the planet.
 """)
 while True:
     choice = int(input("""What do you want to do?
@@ -27,36 +27,35 @@ while True:
 3. Flee
 4. Quit
 """))
-        
-        #I recalled certain parameters from the class to create a function for the characters to take damage
+
     if choice == 1:
         print(f"You have struck Zaboomafoo, great job! But it looks like you took damage as well")
-        print(f"the villian's remaining HP is {Villian.HP}")
+        print(f"the Villain's remaining HP is {Villain.HP}")
         print(f"the hero's remaining HP is {Hero.HP}")
-        Villian.takedamage(Hero.ATK)
-        Hero.takedamage(Villian.ATK*.65) 
-        # the villian and hero takes damage in this instance
+        Villain.takedamage(Hero.ATK)
+        Hero.takedamage(Villain.ATK*.65) 
+        # I took my function from above and invoked it with the parameters from my class to determine how much damage the characters take.
+        # if/elif statements to break the loop
         if Hero.HP <= 0:
-            # if/elif statement to break the loop
-            print("game over")
-        elif Villian.HP <= 0:
+           print("game over")
+        elif Villain.HP <= 0:
             print("Zaboomafoo's health has reach 0. You are the victor!")
             break
 
     elif choice == 2:
         print(f"You managed to partially negate Zaboomafoo's ATK and counter, stay focused!")
-        print(f"the villian's remaining HP is {Villian.HP}")
+        print(f"the Villain's remaining HP is {Villain.HP}")
         print(f"the hero's remaining HP is {Hero.HP}")
-        Hero.takedamage(Villian.ATK/2)
-        Villian.takedamage(Hero.ATK*.80)
+        Hero.takedamage(Villain.ATK/2)
+        Villain.takedamage(Hero.ATK*.80)
         if Hero.HP <= 0:
             print("game over")
-        elif Villian.HP <= 0:
+        elif Villain.HP <= 0:
             print("Zaboomafoo's health has reach 0. You are the victor!")
             break
 
     elif choice == 3:
-        print(f"the villian's remaining HP is {Villian.HP}")
+        print(f"the Villain's remaining HP is {Villain.HP}")
         print(f"the hero's remaining HP is {Hero.HP}")
         Hero.takedamage(120)
         if Hero.HP <= 0:
