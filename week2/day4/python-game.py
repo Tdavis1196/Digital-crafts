@@ -10,8 +10,8 @@ class character:
 # created variable to take input from user to take place as the name for the Hero.
 # I also assigned the hero and villian HP and Atk power.
 name = input("Enter your character's name:")
-Hero = character(name,120,25)
-Villian = character("Zaboomafoo",135,30)
+Hero = character(name,120,40)
+Villian = character("Zaboomafoo",135,45)
 print({"Hero Name"},Hero.Name,{"Hero HP"},Hero.HP,{"Hero Attack Power"},Hero.ATK)
 print({"Villian Name"},Villian.Name,{"Villian HP"},Villian.HP,{"Villian Attack Power"},Villian.ATK)
 
@@ -40,7 +40,7 @@ while True:
             # if/elif statement to break the loop
             print("game over")
         elif Villian.HP <= 0:
-            print("Victory")
+            print("Zaboomafoo's health has reach 0. You are the victor!")
             break
 
     elif choice == 2:
@@ -52,7 +52,7 @@ while True:
         if Hero.HP <= 0:
             print("game over")
         elif Villian.HP <= 0:
-            print("Victory")
+            print("Zaboomafoo's health has reach 0. You are the victor!")
             break
 
     elif choice == 3:
@@ -60,7 +60,7 @@ while True:
         print(f"the hero's remaining HP is {Hero.HP}")
         Hero.takedamage(120)
         if Hero.HP <= 0:
-            print(name,", you have been DEFEATED!")
+            print(name,", you have been OUTMATCHED! Game Over")
             break
     elif choice == 4:
         break
