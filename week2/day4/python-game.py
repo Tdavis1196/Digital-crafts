@@ -45,6 +45,7 @@ What do you want to do?
         #
         #I recalled certain parameters from the class to create a function for the characters to take damage
     if choice == 1:
+        print(f"You have struck Zaboomafoo, great job! But it looks like you took damage as well")
         print(f"the villian's remaining HP is {Villian.HP}")
         print(f"the hero's remaining HP is {Hero.HP}")
         Villian.takedamage(Hero.ATK)
@@ -56,6 +57,7 @@ What do you want to do?
             break
 
     elif choice == 2:
+        print(f"You managed to partially negate Zaboomafoo's ATK and counter, stay focused!")
         print(f"the villian's remaining HP is {Villian.HP}")
         print(f"the hero's remaining HP is {Hero.HP}")
         Hero.takedamage(Villian.ATK/2)
