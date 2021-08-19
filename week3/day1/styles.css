@@ -1,0 +1,63 @@
+.player{
+    width: 500px;
+    height: 500px;
+    margin-left: 35%;
+    border-style: solid;
+}
+.head1{
+    text-align: center;
+    text-decoration: coral;
+    background-color: turquoise;
+    border-style: solid;
+}
+.headpos{
+    text-align: center;
+    background-color: coral;
+    border-style: solid;
+}
+ul {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: coral;
+    border-style: solid;
+  }
+  
+  li {
+    float: inline-start;
+  }
+  
+  li a {
+    display: block;
+    color:black;
+    text-align: center;
+    padding: 0.5px 0.5px;
+    text-decoration: underline;
+  }
+  li a:hover {
+    background-color: #111;
+  }
+ body{
+    background-image: url(https://cdn.wallpapersafari.com/44/31/ei8FfC.png);
+    background-repeat: repeat;
+}
+div{
+    background-color: rgb(93, 216, 224);
+    text-shadow: 2px 2px 5px coral;
+    border-style: solid;
+}
+main{
+    background-color: deeppink;
+    text-align: center;
+    border-style: solid;
+}
+button{
+    border: none;
+    color:black;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
