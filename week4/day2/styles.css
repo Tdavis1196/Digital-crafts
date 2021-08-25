@@ -1,0 +1,27 @@
+html{
+    background-image: url(https://jquerypluginsfree.com/uploads/Snipaste_2020-03-16_22-36-07.png);
+    background-position: center;
+    justify-content: center;
+    position: fixed;
+    top: 40%;
+    left: 41%;
+} 
+h1{
+    border-style:initial;
+    border-color: black;
+    text-align: center;
+}
+.second-container{
+    border-style: solid;
+    height: 350px;
+    width: 750px;
+    background-color:paleturquoise;
+    color: black;
+}
+input{
+    margin-left: 12.5vh;
+}
+button{
+    margin-left: 2.5vh;
+    background-color: yellow;
+}
