@@ -1,0 +1,29 @@
+body{
+    background-image: url(https://wallpapercave.com/wp/yRzA3uZ.jpg);
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+h1{
+    display:flex;
+    justify-content: center;
+    color: rgba(252,205,179,255);
+    margin-bottom: auto;
+    /* margin-top: 25vh; */
+}
+.fetch{
+    background-color:rgba(252,205,179,255);
+}
+.secondContainer{
+    background-color: seashell;
+    color:rgba(56,85,110,255);
+    font-weight: bolder;
+}
+.input{
+    border-color: rgba(252,205,179,255);
+}
+.reset{
+    background-color: rgba(252,205,179,255);
+}
