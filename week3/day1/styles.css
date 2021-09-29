@@ -25,6 +25,7 @@ ul {
   
   li {
     float: inline-start;
+    border-style: groove;
   }
   
   li a {

@@ -1,0 +1,12 @@
+.nlogo{
+    display: flex;
+    justify-content: flex-start;
+    max-height: 32px;
+    max-width: 56px;
+}
+body{
+    background-color: black;
+}
+header{
+    color:white
+}

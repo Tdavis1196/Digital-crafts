@@ -1,0 +1,30 @@
+header{
+    display:flex;
+    justify-content: center;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    border-style:solid;
+    min-height: 80vh;
+    min-width: 60vh;
+    margin: 5vh;
+    
+}
+.content{
+    display:flex;
+    justify-content: flex-start;
+    border-style: solid;
+    max-height: 70vh;
+    min-width: 132vh;
+    margin: 5vh;
+}
+footer{
+    display:flex;
+    justify-content: center;    
+}
+div{
+    border-top: solid;
+    border-bottom: solid;
+    display: flex
+}

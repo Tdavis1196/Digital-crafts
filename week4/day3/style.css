@@ -1,0 +1,7 @@
+body{
+    object-position: center;
+}
+.images{
+    min-height: 400px;
+    min-width: 600;
+}
