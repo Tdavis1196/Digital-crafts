@@ -20,7 +20,7 @@ class Card extends Component {
 
   render() {
     const { flipped } = this.state;
-    const { name, hp, sprites } = this.props.pokemon;
+    const { name, hp, sprites, id } = this.props.pokemon;
     return (
       <div className="poke-card">
         <img src={flipped ? sprites.back : sprites.front} alt="" />

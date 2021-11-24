@@ -222,12 +222,21 @@ class CardContainer extends Component {
     const pokeData = this.state.pokemon[0].pokemon;
 
     return (
+      <>
+      <div class="header">
+      <h1>Poke Cards</h1>
+      </div>      
+    <div class="card-background">
       <div class="card-container">
         {pokeData.map((pokemon) => (
           <Card pokemon={pokemon} onDelete={this.delete} />
         ))}
         
       </div>
+    </div> 
+      </>
+      
+      
       
     );
   }
