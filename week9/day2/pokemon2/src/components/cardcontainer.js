@@ -218,13 +218,14 @@ class CardContainer extends Component {
     const pokes = this.state.pokemon[0].pokemon.filter(i => i.id !== id)
     this.setState({pokes})
   }
+  
   render() {
     const pokeData = this.state.pokemon[0].pokemon;
-
+    const logo= <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pok%C3%A9mon_GO_logo.svg/100px-Pok%C3%A9mon_GO_logo.svg.png" alt="pokelogo"></img>
     return (
       <>
       <div class="header">
-      <h1>Poke Cards</h1>
+      <h1>{logo}</h1>
       </div>      
     <div class="card-background">
       <div class="card-container">

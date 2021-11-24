@@ -12,10 +12,7 @@
     justify-content: center;
     background-color: black;
   }
-  h1{
-    color: red;
-    font-family: sans-serif;
-  }
+  
   .poke-card {
     text-align: center;
     background:linear-gradient(0deg, red 0%, gold 100%);
